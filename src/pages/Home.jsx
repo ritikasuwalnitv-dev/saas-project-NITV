@@ -1,14 +1,14 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 export default function Home() {
   return (
     <>
       <Navbar/>
 
-      <main className="p-4">
-        <h1 className="text-2xl">Homepage</h1>
-      </main>
+      <Hero/>
+   
 
       <Footer />
     </>

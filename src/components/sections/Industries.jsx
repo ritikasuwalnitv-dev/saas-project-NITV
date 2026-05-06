@@ -52,7 +52,7 @@ const industries = [
 const Industries = () => {
   return (
     <section
-      className="w-full bg-[#f8f8f8] py-16 md:py-16"
+      className="w-full bg-[#ffffff] py-16 md:py-16"
       data-node-id="1:4243"
     >
       <div className="mx-auto w-full max-w-[1200px] px-4 md:px-6 flex flex-col gap-6">

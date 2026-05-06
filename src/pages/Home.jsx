@@ -1,16 +1,12 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
+import MainLayout from "../layouts/MainLayout";
+import Hero from "../components/sections/Hero";
+import Industries from "../components/sections/Industries";
 
 export default function Home() {
   return (
-    <>
-      <Navbar/>
-
-      <Hero/>
-   
-
-      <Footer />
-    </>
-  )
+    <MainLayout>
+      <Hero />
+      <Industries />
+    </MainLayout>
+  );
 }

@@ -1,8 +1,5 @@
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -11,9 +8,10 @@ export default {
       },
       fontFamily: {
         baloo: ["'Baloo Thambi 2'", "cursive"],
-         inter: ["Inter", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        sans: ["Rubik", "sans-serif"],
       },
     },
   },
   plugins: [],
-}
+};

@@ -51,14 +51,14 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section
+    <section id="use-cases"
       className="w-full bg-[#ffffff] py-16 md:py-16"
       data-node-id="1:4243"
     >
       <div className="mx-auto w-full max-w-[1200px] px-4 md:px-6 flex flex-col gap-6">
         {/* Heading */}
         <div className="mx-auto max-w-[620px] text-center">
-          <h2 className="font-inter text-[28px] sm:text-[34px] md:text-[48px] font-extrabold leading-tight text-[#282828]">
+          <h2 className="font-inter text-[28px] sm:text-[34px] md:text-[48px] font-extrabold leading-tight text-[#0B1C30]">
             Built for Every Industry
           </h2>
 

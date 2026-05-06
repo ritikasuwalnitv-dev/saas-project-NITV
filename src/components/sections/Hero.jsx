@@ -5,10 +5,11 @@ import { Circle } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section
-      className="w-full aspect-[1920/756] min-h-[600px] md:min-h-[500px] bg-cover bg-center relative"
-      style={{ backgroundImage: `url(${heroBg})` }}
-    >
+    
+   <section id="why-nitv"
+  className="w-full aspect-[1920/756] min-h-[600px] md:min-h-[500px] bg-cover bg-center relative brightness-110"
+  style={{ backgroundImage: `url(${heroBg})` }}
+>
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full px-4 md:px-8">
         {/* Main vertical container (32px gap) */}

@@ -25,10 +25,10 @@ const reviews = [
 export default function Testimonials() {
   return (
     <section id="resources"
-      className="py-20 bg-no-repeat bg-center "
+      className="py-20 px-6 bg-no-repeat bg-center "
       style={{
         backgroundImage: `url(${bgImage})`,
-        backgroundSize: "contain",
+        backgroundSize: "cover",
       }}
     >
       <div className="max-w-[1200px] mx-auto px-6">

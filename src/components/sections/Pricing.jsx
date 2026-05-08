@@ -75,7 +75,7 @@ export default function Pricing() {
   const [billing, setBilling] = useState("monthly");
 
   return (
-    <section  id="pricing" className="py-12 bg-[#969696]/10">
+    <section  id="pricing" className="py-12 px-6 bg-[#969696]/10">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <div className="mx-auto max-w-[670px] text-center">
@@ -195,9 +195,16 @@ export default function Pricing() {
                 {p.cta}
               </button>
             </div>
+            
           ))}
+          
+          
         </div>
+        
+        
       </div>
+      
     </section>
+    
   );
 }

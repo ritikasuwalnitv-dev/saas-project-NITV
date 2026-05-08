@@ -140,39 +140,39 @@ const Footer = () => {
      
 
       <div className="w-full h-[2px] bg-gray-800 mt-10 relative">
+{/* DESKTOP CHAT */}
+<div className="hidden md:block fixed bottom-6 right-6 z-50">
+  <div className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-5 py-3 rounded-full shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
+    
+    <MessageSquare className="w-5 h-5" />
 
-  {/* DESKTOP CHAT */}
-  <div className="hidden md:block absolute right-6 -top-6">
-    <div className="flex items-center gap-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white px-5 py-3 rounded-full shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
-      
-      <MessageSquare className="w-5 h-5" />
-      <span className="text-sm font-medium">Support Chat</span>
+    <span className="text-sm font-medium">
+      Support Chat
+    </span>
 
-      <span className="bg-red-500 text-xs w-5 h-5 flex items-center justify-center rounded-full">
-        1
-      </span>
+    <span className="bg-red-500 text-xs w-5 h-5 flex items-center justify-center rounded-full">
+      1
+    </span>
 
-      <div className="bg-blue-300/40 w-7 h-7 flex items-center justify-center rounded-full">
-        ✕
-      </div>
-
+    <div className="bg-blue-300/40 w-7 h-7 flex items-center justify-center rounded-full">
+      ✕
     </div>
   </div>
+</div>
 
-  {/* MOBILE CHAT */}
-  <div className="md:hidden absolute right-4 -top-5">
-    <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
-      
-      <MessageSquare className="w-6 h-6 text-white" />
+{/* MOBILE CHAT */}
+<div className="md:hidden fixed bottom-5 right-4 z-50">
+  <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
+    
+    <MessageSquare className="w-6 h-6 text-white" />
 
-      {/* Red badge */}
-      <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full">
-        1
-      </span>
+    {/* Red badge */}
+    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full">
+      1
+    </span>
 
-    </div>
   </div>
-
+</div>
 </div>
 
       {/* COPYRIGHT (CENTERED TO 1200px) */}

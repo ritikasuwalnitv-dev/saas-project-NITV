@@ -51,7 +51,7 @@ const industries = [
 
 const Industries = () => {
   return (
-    <section id="use-cases"
+    <section id="use-cases px-6" 
       className="w-full bg-[#ffffff] py-16 md:py-16"
       data-node-id="1:4243"
     >
@@ -62,14 +62,14 @@ const Industries = () => {
             Built for Every Industry
           </h2>
 
-          <p className="mx-auto mt-2 sm:mt-3 max-w-[460px] font-inter text-sm sm:text-base leading-6 sm:leading-7 text-[#17171799]">
+          <p className="mx-auto px-6 mt-2 sm:mt-3 max-w-[460px] font-inter text-sm sm:text-base leading-6 sm:leading-7 text-[#17171799]">
             Powering streaming platforms across the world&apos;s most demanding
             industries
           </p>
         </div>
 
         {/* Grid */}
-        <div className="mt-12 sm:mt-20 grid grid-cols-1 gap-y-12 sm:gap-y-20 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-3">
+        <div className="mt-12 sm:mt-20 px-6 grid grid-cols-1 gap-y-12 sm:gap-y-20 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-3">
           {industries.map((industry) => (
             <article
               key={industry.title}

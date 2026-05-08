@@ -4,61 +4,38 @@ import Button from "../ui/Button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showNav, setShowNav] = useState(true);
+
   const [scrolled, setScrolled] = useState(false);
 
-  const lastScrollY = useRef(0);
-  const ticking = useRef(false);
+ 
 
   useEffect(() => {
-    const updateScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // hide/show
-      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        setShowNav(false);
-      } else {
-        setShowNav(true);
-      }
-
-      // add shadow/bg when scrolled
-      setScrolled(currentScrollY > 10);
-
-      lastScrollY.current = currentScrollY;
-      ticking.current = false;
-    };
-
-    const handleScroll = () => {
-      if (!ticking.current) {
-        window.requestAnimationFrame(updateScroll);
-        ticking.current = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleNavClick = () => {
-    setIsOpen(false);
-    setShowNav(false);
+    
+      const handleScroll = () => {
+    setScrolled(window.scrollY > 10);
   };
 
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+  const handleNavClick = () => {
+  setIsOpen(false);
+};
   return (
     <>
       {/* Spacer */}
       <div className="h-[80px]" />
 
       <header
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
-        ${showNav ? "translate-y-0" : "-translate-y-full"}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
         ${
           scrolled
             ? "bg-navbar/95 backdrop-blur-md shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
             : "bg-navbar"
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="max-w-[1200px] mx-auto lg:px-4 md:px-6 py-4 px-5 md:py-5 flex items-center justify-between">
 
           {/* Logo */}
           <h1  className="font-baloo font-bold text-[26px] tracking-tight">
@@ -67,7 +44,7 @@ export default function Navbar() {
           </h1>
 
           {/* Nav */}
-          <nav className="hidden md:flex items-center gap-8 text-white font-medium text-[15px]">
+          <nav className="hidden md:flex items-center xl:gap-8 gap-4 text-white font-medium text-[13px] lg:text-[15px] whitespace-nowrap">
             {[
               { label: "Why NITV+", id: "why-nitv" },
               { label: "Use Cases", id: "use-cases" },
@@ -90,7 +67,7 @@ export default function Navbar() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-4">
+         <div className="hidden md:flex items-center gap-2 lg:gap-4 whitespace-nowrap">
             <Button>REQUEST A DEMO</Button>
             <span className="text-white/80 text-sm cursor-pointer hover:text-white">
               EN
@@ -130,7 +107,9 @@ export default function Navbar() {
             <div className="border-t border-white/10"></div>
 
             <div className="flex flex-col gap-3">
-              <Button>REQUEST A DEMO</Button>
+              <Button className="text-[10px] lg:text-[14px] px-2 lg:px-6">
+  REQUEST A DEMO
+</Button>
               <span className="text-white/80 text-sm text-center">
                 Language: EN
               </span>

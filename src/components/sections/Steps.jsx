@@ -20,7 +20,7 @@ const steps = [
 
 const Steps = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 px-6 bg-white">
       <div className="mx-auto max-w-[1200px] px-4 md:px-6 gap-12 flex flex-col">
         {/* Heading */}
         <div className="mx-auto max-w-[620px] text-center">
@@ -87,12 +87,12 @@ const Steps = () => {
               </div>
 
               {/* Title */}
-              <h3 className="mt-8 font-inter font-bold text-[#171717] text-[19px]">
+              <h3 className="md:mt-12 font-inter font-bold text-[#171717] text-[19px]">
                 {s.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-4 font-inter font-medium text-[14px] text-[#171717]/80 max-w-[280px] mx-auto">
+              <p className="mt-3 font-inter font-medium text-[14px] text-[#171717]/80 max-w-[280px] mx-auto">
                 {s.desc}
               </p>
             </div>

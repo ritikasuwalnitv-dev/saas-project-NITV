@@ -9,7 +9,7 @@ const stats = [
 
 export default function Pricing() {
   return (
-    <section className="py-12 md:py-16 bg-white border-y border-gray-100">
+    <section className="py-12 px-6 md:py-16 bg-white border-y border-gray-100">
       <div className="mx-auto max-w-[1200px] px-4 md:px-6">
         
         <div className="grid grid-cols-2 md:grid-cols-4 text-center font-medium">

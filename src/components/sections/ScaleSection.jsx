@@ -65,13 +65,13 @@ const features = [
 
 export default function ScaleSection() {
   return (
-    <section className="w-full bg-[#F5F5F5] py-16 md:py-20 lg:py-16">
+    <section className="w-full bg-[#F5F5F5] px-6 py-16 md:py-20 lg:py-16">
       <div className="mx-auto w-full max-w-[1244px] px-4 md:px-6">
         <div className="mx-auto max-w-[760px] text-center">
           <h2 className="font-inter text-[28px] sm:text-[34px] md:text-[48px] font-extrabold leading-tight text-[#0B1C30]">
             Everything You Need to Scale
           </h2>
-          <p className="mx-auto mt-2 sm:mt-3 max-w-[560px] font-inter text-sm sm:text-base leading-6 sm:leading-7 text-[#17171799]">
+          <p className="mx-auto px-6 mt-2 sm:mt-3 max-w-[560px] font-inter text-sm sm:text-base leading-6 sm:leading-7 text-[#17171799]">
             From multi-tenant management to global delivery, we&apos;ve built
             the ultimate toolkit for streaming giants
           </p>
@@ -85,15 +85,16 @@ export default function ScaleSection() {
               <article
                 key={feature.title}
                 className="
-    group flex flex-col justify-between
-    w-full sm:w-[300px] lg:w-[271px]
-    min-h-[300px] lg:h-[350px]
-    rounded-[16px]
-    bg-[#2563EB]/10
-    px-5 sm:px-6 py-6 sm:py-8
-    shadow-[0_12px_32px_rgba(67,96,160,0.08)]
-    transition-transform duration-300 hover:-translate-y-1
-  "
+  group flex flex-col justify-
+ items-start text-left
+  w-full sm:w-[300px] lg:w-[271px]
+  min-h-[300px] lg:h-[350px]
+  rounded-[16px]
+  bg-[#2563EB]/10
+  px-5 sm:px-6 py-6 sm:py-8
+  shadow-[0_12px_32px_rgba(67,96,160,0.08)]
+  transition-transform duration-300 hover:-translate-y-1
+"
               >
                 {/* 1️ ICON BLOCK */}
                 <div>
@@ -103,7 +104,7 @@ export default function ScaleSection() {
                 </div>
 
                 {/* 2️ CONTENT BLOCK */}
-                <div className="flex flex-col justify-between h-full mt-[35px]">
+               <div className="flex flex-col justify-between h-full mt-[35px] items-center sm:items-start">
                   {/* Top content */}
                   <div className="flex flex-col gap-3">
                     <h3 className="max-w-[260px] font-inter text-[16px] sm:text-[18px] lg:text-[19px] font-bold leading-[1.3] text-[#161616] whitespace-pre-line">
@@ -116,7 +117,7 @@ export default function ScaleSection() {
                   </div>
 
                   {/* CTA at bottom */}
-                  <a className="inline-flex items-center gap-2 font-inter text-[14px] sm:text-[15px] lg:text-[16px] font-bold text-brand hover:opacity-70">
+                  <a className="inline-flex items-center gap-2 font-inter text-[14px] sm:text-[15px] lg:text-[16px] font-bold text-brand hover:opacity-70 justify-center sm:justify-start">
                     Learn More
                     <ArrowRight size={18} strokeWidth={2.25} />
                   </a>

@@ -1,86 +1,183 @@
-import {
-  Tv,
-  Radio,
-  Cloud,
-  GraduationCap,
-  Briefcase,
-  Megaphone,
-  Building2,
-  Rss,
-  Shield,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+
+import StreamIcon from "../../assets/ScaleByNeeds/1st.svg";
+import OttIcon from "../../assets/ScaleByNeeds/2nd.svg";
+import IptvIcon from "../../assets/ScaleByNeeds/3rd.svg";
+import TvIcon from "../../assets/ScaleByNeeds/4th.svg";
+import MonetizeIcon from "../../assets/ScaleByNeeds/5th.svg";
+import EventIcon from "../../assets/ScaleByNeeds/6th.svg";
+import TrainingIcon from "../../assets/ScaleByNeeds/7th.svg";
+import MultiDeviceIcon from "../../assets/ScaleByNeeds/8th.svg";
+import SecureIcon from "../../assets/ScaleByNeeds/9th.svg";
+
+import StreamHoverIcon from "../../assets/ScaleByNeeds/h1.svg";
+import OttHoverIcon from "../../assets/ScaleByNeeds/h2.svg";
+import IptvHoverIcon from "../../assets/ScaleByNeeds/h3.svg";
+import TvHoverIcon from "../../assets/ScaleByNeeds/h4.svg";
+import MonetizeHoverIcon from "../../assets/ScaleByNeeds/h5.svg";
+import EventHoverIcon from "../../assets/ScaleByNeeds/h6.svg";
+import TrainingHoverIcon from "../../assets/ScaleByNeeds/h7.svg";
+import MultiDeviceHoverIcon from "../../assets/ScaleByNeeds/h8.svg";
+import SecureHoverIcon from "../../assets/ScaleByNeeds/h9.svg";
+
+
 
 const needs = [
-  { icon: Tv, title: "I want to stream videos and live broadcasts" },
-  { icon: Radio, title: "I want to launch my own OTT platform" },
-  { icon: Cloud, title: "I want to deliver IPTV services to my subscribers" },
-  { icon: GraduationCap, title: "I want to run 24/7 linear TV channels" },
-  { icon: Briefcase, title: "I want to sell and monetize my video / audio content" },
-  { icon: Megaphone, title: "I want to host a high-quality online event" },
-  { icon: Building2, title: "I want to use videos for internal training and education" },
-  { icon: Rss, title: "I want to stream content across mobile, TV, and web" },
-  { icon: Shield, title: "I want to manage and distribute media files securely" },
+  {
+    icon: StreamIcon,
+    hoverIcon: StreamHoverIcon,
+    title: "I want to stream videos and live broadcasts",
+  },
+  {
+    icon: OttIcon,
+    hoverIcon: OttHoverIcon,
+    title: "I want to launch my own OTT platform",
+  },
+  {
+    icon: IptvIcon,
+    hoverIcon: IptvHoverIcon,
+    title: "I want to deliver IPTV services to my subscribers",
+  },
+  {
+    icon: TvIcon,
+    hoverIcon: TvHoverIcon,
+    title: "I want to run 24/7 linear TV channels",
+  },
+  {
+    icon: MonetizeIcon,
+    hoverIcon: MonetizeHoverIcon,
+    title: "I want to sell and monetize my video / audio content",
+  },
+  {
+    icon: EventIcon,
+    hoverIcon: EventHoverIcon,
+    title: "I want to host a high-quality online event",
+  },
+  {
+    icon: TrainingIcon,
+    hoverIcon: TrainingHoverIcon,
+    title: "I want to use videos for internal training and education",
+  },
+  {
+    icon: MultiDeviceIcon,
+    hoverIcon: MultiDeviceHoverIcon,
+    title: "I want to stream content across mobile, TV, and web",
+  },
+  {
+    icon: SecureIcon,
+    hoverIcon: SecureHoverIcon,
+    title: "I want to manage and distribute media files securely",
+  },
 ];
 
 export default function SearchByNeeds() {
   return (
-    <section className="py-24 bg-[#969696]/10">
+    <section className="bg-[#f5f5f5] px-6 md:py-24 py-12">
       <div className="max-w-[1200px] mx-auto px-6">
-        {/* Header */}
-        <div className="mx-auto max-w-[620px] text-center">
-          <p className=" text-[#9096a0] font-inter font-semibold lg:text-[14px] text-[12px]">
-            FIND YOUR PERFECT STREAMING SOLUTION{" "}
+        {/* heading */}
+        <div className="text-center">
+          <p className="text-[#9096a0] font-inter font-semibold lg:text-[14px] text-[12px]">
+            FIND YOUR PERFECT STREAMING SOLUTION
           </p>
-          <h2 className="font-inter text-[28px] sm:text-[34px] md:text-[48px] font-extrabold leading-tight text-[#0B1C30]">
+
+          <h2 className="font-inter text-[28px] sm:text-[34px] md:text-[48px] font-extrabold leading-tight text-[#0B1C30] mt-2">
             Search by Needs
           </h2>
 
-          <p className="mx-auto mt-2  mb-10 sm:mt-3 max-w-[500px] font-inter text-sm sm:text-base leading-6 sm:leading-7 text-[#17171799]">
+          <p className="mt-2 text-[#7B7B7B] text-[16px]">
             Tell us what you need — we'll show you exactly how NITV fits.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {needs.map(({ icon: Icon, title }, index) => (
+        {/* cards */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 justify-items-center gap-x-4 gap-y-20">
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_55%)]" />
+          {needs.map(({ icon, hoverIcon, title }, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl p-6 
-      bg-gradient-to-br from-blue-600 to-blue-500 text-white
-      border border-white/10
-      transition-all duration-300 ease-out
-      hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(37,99,235,0.35)]
-      cursor-pointer"
+            className="
+  relative rounded-[9px] w-full max-w-[390px] h-[246px]
+  flex flex-col items-center justify-center text-center
+  px-4 transition-all duration-300 cursor-pointer group
+  bg-[#2053C5] text-white
+  hover:bg-white hover:text-[#2053C5]
+"
             >
-              {/* subtle glow */}
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 
-      bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.2),transparent_50%)]"
-              />
+              {/* floating circle */}
+             <div
+  className="
+    absolute -top-[60px] left-1/2 -translate-x-1/2
+    w-[120px] h-[120px] rounded-full
+    border-[8px] border-[#f4f4f4]
+    flex items-center justify-center
+    shadow-md
+    transition-all duration-500 ease-out
+    bg-white group-hover:bg-[#2053C5]
+  "
+>
+  <div className="relative w-[56px] h-[56px]">
+    
+    {/* Normal black icon */}
+    <img
+      src={icon}
+      alt=""
+      className="
+        absolute inset-0
+        w-full h-full
+        transition-opacity duration-300
+        group-hover:opacity-0
+      "
+    />
 
-              {/* icon */}
-              <div
-                className="relative w-12 h-12 flex items-center justify-center rounded-xl 
-      bg-white/10 mb-5 transition-transform duration-300 group-hover:scale-110"
-              >
-                <Icon className="h-6 w-6" />
-              </div>
+    {/* White hover icon */}
+    <img
+      src={hoverIcon}
+      alt=""
+      className="
+        absolute inset-0
+        w-full h-full
+        opacity-0
+        transition-opacity duration-300
+        group-hover:opacity-100
+      "
+    />
+  </div>
+</div>
 
               {/* title */}
-              <h3 className="relative font-semibold text-[15px] leading-snug">
+              <h3 className="
+  max-w-[310px] text-[20px] leading-[30px] font-semibold
+  transition-all duration-300
+  group-hover:tracking-[0.2px]
+">
                 {title}
               </h3>
 
-              {/* link */}
-              <span className="relative mt-5 inline-flex items-center gap-1 text-xs font-semibold opacity-80 group-hover:opacity-100">
+              {/* learn more */}
+              <button
+               className="
+  absolute bottom-6 right-6
+  inline-flex items-center gap-1
+  text-[16px] font-medium
+  transition-all duration-300
+  text-white group-hover:text-[#2053C5]
+"
+              >
                 Learn More
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </span>
+             <ArrowRight className="w-4 h-4 transition-all duration-300 group-hover:translate-x-2" />
+              </button>
             </div>
           ))}
         </div>
+        <div className="mt-8  flex justify-center">
+                  <a
+                    href="#"
+                    className="flex items-center gap-2 font-inter font-bold text-[#2053c5] text-sm sm:text-base transition-opacity duration-300 hover:opacity-90"
+                  >
+                    View More
+                    <ArrowRight size={18} className="sm:w-5 sm:h-5" />
+                  </a>
+                </div>
       </div>
     </section>
   );

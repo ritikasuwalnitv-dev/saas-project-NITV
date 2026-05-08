@@ -161,13 +161,13 @@ const Footer = () => {
 </div>
 
 {/* MOBILE CHAT */}
-<div className="md:hidden fixed bottom-5 right-4 z-50">
-  <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
+<div className="md:hidden fixed bottom-16 right-8 z-50">
+  <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 shadow-[0_10px_30px_rgba(37,99,235,0.4)]">
     
     <MessageSquare className="w-6 h-6 text-white" />
 
     {/* Red badge */}
-    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full">
+    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-6 h-6 flex items-center justify-center rounded-full">
       1
     </span>
 

@@ -52,7 +52,7 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-[#161C28] text-white">
       {/* CONTENT CONTAINER */}
-      <div className="mx-auto w-full max-w-[1200px] px-4 md:px-6 pt-10 pb-0">
+      <div className="mx-auto px-6 w-full max-w-[1200px]  md:px-6 pt-10 pb-0">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_1.9fr] lg:gap-16">
           {/* LEFT */}
           <div className="max-w-[280px] ">

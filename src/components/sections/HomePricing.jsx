@@ -16,6 +16,9 @@ const plans = [
       "ABR streaming",
       "Playlists, categories & nested content",
     ],
+       
+    
+
     cta: "Get Started",
     featured: false,
   },

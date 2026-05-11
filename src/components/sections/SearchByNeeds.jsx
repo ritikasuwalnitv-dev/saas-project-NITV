@@ -20,8 +20,6 @@ import TrainingHoverIcon from "../../assets/ScaleByNeeds/h7.svg";
 import MultiDeviceHoverIcon from "../../assets/ScaleByNeeds/h8.svg";
 import SecureHoverIcon from "../../assets/ScaleByNeeds/h9.svg";
 
-
-
 const needs = [
   {
     icon: StreamIcon,
@@ -95,7 +93,7 @@ export default function SearchByNeeds() {
           {needs.map(({ icon, hoverIcon, title }, index) => (
             <div
               key={index}
-            className="
+              className="
   relative rounded-[9px] w-full max-w-[390px] h-[246px]
   flex flex-col items-center justify-center text-center
   px-4 transition-all duration-300 cursor-pointer group
@@ -104,8 +102,8 @@ export default function SearchByNeeds() {
 "
             >
               {/* floating circle */}
-             <div
-  className="
+              <div
+                className="
     absolute -top-[60px] left-1/2 -translate-x-1/2
     w-[120px] h-[120px] rounded-full
     border-[8px] border-[#f4f4f4]
@@ -114,48 +112,39 @@ export default function SearchByNeeds() {
     transition-all duration-500 ease-out
     bg-white group-hover:bg-[#2053C5]
   "
->
-  <div className="relative w-[56px] h-[56px]">
-    
-    {/* Normal black icon */}
-    <img
-      src={icon}
-      alt=""
-      className="
+              >
+                <div className="relative w-[56px] h-[56px]">
+                  {/* Normal black icon */}
+                  <img
+                    src={icon}
+                    alt=""
+                    className="
         absolute inset-0
         w-full h-full
         transition-opacity duration-300
         group-hover:opacity-0
       "
-    />
+                  />
 
-    {/* White hover icon */}
-    <img
-      src={hoverIcon}
-      alt=""
-      className="
-        absolute inset-0
-        w-full h-full
-        opacity-0
-        transition-opacity duration-300
-        group-hover:opacity-100
-      "
-    />
-  </div>
-</div>
+                  {/* White hover icon */}
+                  <img
+                    src={hoverIcon}
+                    alt=""
+                    className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  />
+                </div>
+              </div>
 
               {/* title */}
-              <h3 className="
-  max-w-[310px] text-[20px] leading-[30px] font-semibold
-  transition-all duration-300
-  group-hover:tracking-[0.2px]
-">
+              <h3
+                className=" max-w-[310px] text-[20px] leading-[30px] font-semibold transition-all duration-300 group-hover:tracking-[0.2px]"
+              >
                 {title}
               </h3>
 
               {/* learn more */}
               <button
-               className="
+                className="
   absolute bottom-6 right-6
   inline-flex items-center gap-1
   text-[16px] font-medium
@@ -164,20 +153,20 @@ export default function SearchByNeeds() {
 "
               >
                 Learn More
-             <ArrowRight className="w-4 h-4 transition-all duration-300 group-hover:translate-x-2" />
+                <ArrowRight className="w-4 h-4 transition-all duration-300 group-hover:translate-x-2" />
               </button>
             </div>
           ))}
         </div>
         <div className="mt-8  flex justify-center">
-                  <a
-                    href="#"
-                    className="flex items-center gap-2 font-inter font-bold text-[#2053c5] text-sm sm:text-base transition-opacity duration-300 hover:opacity-90"
-                  >
-                    View More
-                    <ArrowRight size={18} className="sm:w-5 sm:h-5" />
-                  </a>
-                </div>
+          <a
+            href="#"
+            className="flex items-center gap-2 font-inter font-bold text-[#2053c5] text-sm sm:text-base transition-opacity duration-300 hover:opacity-90"
+          >
+            View More
+            <ArrowRight size={18} className="sm:w-5 sm:h-5" />
+          </a>
+        </div>
       </div>
     </section>
   );
